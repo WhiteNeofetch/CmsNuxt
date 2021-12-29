@@ -10,12 +10,13 @@
       <input type="password" name="" required="">
       <label>Password</label>
     </div>
+    <nuxt-link to="Auth/reg">Регистрация</nuxt-link>
     <a href="#">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-      Submit
+      Вход
     </a>
   </form>
 </div>
