@@ -19,6 +19,7 @@ import ProductCard from "../components/ProductCard";
 
 export default {
   name: "index",
+    layout:'new',
   components: {
     ProductCard,
   },
