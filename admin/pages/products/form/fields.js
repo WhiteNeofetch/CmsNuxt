@@ -9,6 +9,14 @@ export const schema = {
       styleClasses: 'col-md-6'
     },
     {
+      type:  'input',
+      label: 'Название игры',
+      model: 'title',
+      placeholder: 'Введите название новости2',
+      inputType:'text',
+      styleClasses: 'col-md-6'
+    },
+    {
       type: 'vueMultiSelect',
       model: 'category',
       label: 'Категория',

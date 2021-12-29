@@ -39,11 +39,12 @@ const genericCrud = (model, {
             let image = body.imageUrl  //ожидает строку base64Image
             let name = body.title   //ожидает название файла
             console.log(body.imageUrl)
-            if(image) {
+            if (image) {
                 let base64Image = image.split(';base64,').pop();
-               
-                let path = `client/static/${name}-${moment().format('DDMMYYYY-HHmmss_SSS')}.jpg` //путь для статики бэка
-                let pathFront = `client/static/${name}-${moment().format('DDMMYYYY-HHmmss_SSS')}.jpg` //путь для статики фронта
+                let data =  moment().format('DDMMYYYY-HHmmss_SSS')
+           
+                let path = `client/static/${name}${data}-}.jpg` //путь для статики бэка
+                let pathFront = `client/static/${name}${data}}.jpg` //путь для статики фронта
                 fs.writeFile(path, base64Image, {encoding: 'base64'}, function(err) { //создание jpg файла
                     console.log('File created');
                 })
@@ -75,9 +76,9 @@ const genericCrud = (model, {
             console.log(body.imageUrl)
             if (image) {
                 let base64Image = image.split(';base64,').pop();
-               
-                let path = `client/static/${name}-${moment().format('DDMMYYYY-HHmmss_SSS')}.jpg` //путь для статики бэка
-                let pathFront = `client/static/${name}-${moment().format('DDMMYYYY-HHmmss_SSS')}.jpg` //путь для статики фронта
+                 let data =  moment().format('DDMMYYYY-HHmmss_SSS')
+             let path = `client/static/${name}${data}.jpg` //путь для статики бэка
+                let pathFront = `client/static/${name}${data}.jpg` //путь для статики фронта
                 body.imageUrl = pathFront;
                 fs.writeFile(path, base64Image, { encoding: 'base64' }, function (err) { //создание jpg файла
                     console.log('File created');

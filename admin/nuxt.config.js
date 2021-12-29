@@ -71,16 +71,16 @@ export default {
         endpoints:{
           user:false,
           refresh:{
-            url:'/auth/refresh',
+            url:'/authClient/refresh',
             method:'post',
           },
           login:{
-            url:'/auth/login',
+            url:'/authClient/login',
             method:'post',
             propertyName:'accessToken'
           },
           logout:{
-            url:'/auth/logout',
+            url:'/authClient/logout',
             method:'post',
           }
         }

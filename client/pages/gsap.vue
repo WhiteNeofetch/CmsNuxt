@@ -5,7 +5,7 @@
     <p
       v-gsap.fromTo="[
       { opacity: 0, y: -350 },
-      { opacity: 1, y: 0, duration: 3 }
+      { opacity: 1, y: 0, duration: 3 ,delay:5000}
     ]"
     >
       NUXT GSAP

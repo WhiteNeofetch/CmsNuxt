@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .login-form__network-error{
   border-radius: 6px;
   padding: 10px;
