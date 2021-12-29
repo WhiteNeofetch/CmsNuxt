@@ -4,6 +4,7 @@ const User = require ('./User')
 const Token = require ('./Token')
 const Comment = require('./Comment')
 const Test = require('./Test')
+const UserClient = require('./UserClient')
 
 module.exports ={
     Product,
@@ -11,5 +12,6 @@ module.exports ={
     User,
     Token,
     Comment,
-    Test
+    Test,
+    UserClient
 };

@@ -46,6 +46,7 @@
               fill="#4F4F4F"
             />
           </svg>
+          <nuxt-link :to="`/products/${_id}`">КЛИКНУТЬ</nuxt-link>
         </div>
       </div>
     </div>
@@ -74,12 +75,18 @@ export default {
       type: String,
       default: "",
     },
-
+    _id:{
+      type: String,
+      default: "",
+    },
     author: {
       type: String,
       default: "",
     }
   },
+  mounted() {
+    console.log('product component')
+  }
 
 };
 </script>

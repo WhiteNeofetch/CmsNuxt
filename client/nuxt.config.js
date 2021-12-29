@@ -36,7 +36,42 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
+
+  auth:{
+    strategies:{
+      local:{
+        scheme: 'refresh',
+        token: {
+          property: 'accessToken',
+          maxAge: 1800,
+          type: 'Authorization'
+        },
+        refreshToken: {
+          property: 'refreshToken',
+          data: 'refreshToken',
+          maxAge: 60 * 60 * 24 * 30
+        },
+        endpoints:{
+          user:false,
+          refresh:{
+            url:'/authClient/refresh',
+            method:'post',
+          },
+          login:{
+            url:'/authClient/login',
+            method:'post',
+            propertyName:'accessToken'
+          },
+          logout:{
+            url:'/authClient/logout',
+            method:'post',
+          }
+        }
+      }
+    }
+  },
 
   server: {
     host: process.env.NUXT_APP_HOST, // default: localhost

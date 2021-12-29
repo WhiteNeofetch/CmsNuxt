@@ -68,6 +68,7 @@
           :description2="product.description2"
           :time="product.time"
           :author="product.author"
+          :_id="product._id"
         />
       </div>
     </section>
@@ -92,6 +93,7 @@ import Product from "../components/Product.vue";
 
 export default {
   name: "index",
+  middleware:'auth',
   components: {
     Product,
   },

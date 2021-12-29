@@ -5,5 +5,6 @@ module.exports = {
         auth: require('./auth.controller'),
         mail: require('./mail.controller'),
         comment: require('./comment.controller'),
-        test: require('./test.controller')
+        test: require('./test.controller'),
+        authClient: require('./authClient.controller')
 };
