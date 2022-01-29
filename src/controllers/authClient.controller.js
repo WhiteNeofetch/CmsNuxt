@@ -121,6 +121,7 @@ module.exports = {
     },
     async signUP({body: {email,password} }, res){
         try {
+            
             const foundUser = await UserClient.findOne({email})
             if(foundUser){
                 return res.status(403).send({
