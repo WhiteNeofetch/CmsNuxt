@@ -14,37 +14,36 @@
 </template>
 
 <script>
-import { mapGetters, mapActions, mapMutations } from "vuex";
-import ProductCard from "../components/ProductCard";
+import { mapGetters, mapActions, mapMutations } from 'vuex'
+import ProductCard from '../components/ProductCard'
 
 export default {
-  name: "index",
-    layout:'new',
+  name: 'index',
+  layout: 'new',
   components: {
     ProductCard,
   },
   async mounted() {
-    await this.fetchProducts();
+    await this.fetchProducts()
     console.log(this.products)
     console.log(this.products[0])
-    
   },
   computed: {
     ...mapGetters({
-         products: "products/items",
+      products: 'products/items',
       // cartItems: "cartItems",
     }),
     // cartItemsIds: ({ cartItems }) => cartItems.map(({ _id }) => _id),
   },
   methods: {
     ...mapActions({
-       fetchProducts: "products/fetchAll",
+      fetchProducts: 'products/fetchAll',
     }),
     // ...mapMutations({
     //   addToCart: "addToCart",
     // }),
   },
-};
+}
 </script>
 
 

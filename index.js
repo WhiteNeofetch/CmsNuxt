@@ -50,7 +50,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(path.resolve(__dirname, 'static'))) // раздает статику 
 
 // роуты
-routes.forEach((item,i) => {
+routes.forEach((item, i) => {
     console.log(`${item} ${i} route  start`)
     app.use(`/api/v1/${item}`, require(`./src/routes/${item}`)) //
 });
@@ -61,11 +61,3 @@ const PORT = 57770;
 http.createServer({}, app).listen(PORT); //, APP_IP
 
 console.log(`server run host:  http://localhost:${PORT}`);
-
-
-
-
-
-
-
-
