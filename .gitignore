@@ -3,6 +3,7 @@ node_modules
 dist
 backups
 client/node_modules
+client/static
 admin/node_modules
 
 # local env files
