@@ -22,7 +22,7 @@ const options = {
             description: 'CRM using express'
         },
         servers: [{
-            url: 'http://localhost:7000'
+            url: `http://${process.env.APP_IP}:${process.env.PORT}`
         }],
     },
     apis: ["./src/documentation/*.js"]
@@ -47,7 +47,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.use(express.static(path.resolve(__dirname, 'static'))) // раздает статику 
+app.use(express.static(path.resolve(__dirname, 'client/static'))) // раздает статику 
 
 // роуты
 routes.forEach((item, i) => {
@@ -55,9 +55,10 @@ routes.forEach((item, i) => {
     app.use(`/api/v1/${item}`, require(`./src/routes/${item}`)) //
 });
 
-const PORT = 7000;
+const PORT = process.env.PORT;
 
+const APP_IP = process.env.APP_IP
 
-http.createServer({}, app).listen(PORT); //, APP_IP
+http.createServer({}, app).listen(PORT,APP_IP); //, APP_IP
 
-console.log(`server run host:  http://localhost:${PORT}`);
+console.log(`server run host:  http://${APP_IP}:${PORT}`);
