@@ -23,7 +23,6 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/axiosport.js',
-     { src: '~/plugins/babylon.js', mode: 'client' },
         // '~/plugins/vee-validate.js'
   ],
 
@@ -32,14 +31,12 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    ['nuxt-gsap-module']
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next'
   ],
 
   auth:{

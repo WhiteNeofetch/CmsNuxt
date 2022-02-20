@@ -1,11 +1,13 @@
 <template>
   <div>
-    {{ this.item.title }}
-    <img :src="this.item.image" alt="" />
-    {{ this.item.description }}
-    {{ this.item.price }}
-    {{ this.item.amount }}
-    {{ this.item.categories }}
+    Заголовок : {{ this.item.title }} <br>
+    Картинка :
+    <img :src="this.item.imageUrl" alt="" />
+    <br>
+    Описание1 : {{ this.item.description }} <br>
+    Описание2 : {{ this.item.price }}<br>
+    Количество : {{ this.item.amount }}<br>
+    Категория : {{ this.item.category }}<br>
     <input type="text" v-model="model.description"/>
     <input type="text"  v-model="model.title"/>
     <button @click="Createcomments">добавить коммент</button>
@@ -25,6 +27,7 @@ import MevnHeader from "../../components/layouts/Header.vue";
 import Comment from "../../components/Comment.vue";
 export default {
   name: "App",
+   layout: 'unauthorized',
   components: {
     MevnHeader,
     Comment,
@@ -40,6 +43,7 @@ export default {
     await this.fetchComments();
     console.log(this.item);
     console.log(this.comments);
+    console.log(this.$route.params.id)
   },
   methods: {
     ...mapActions({

@@ -22,7 +22,7 @@ const options = {
             description: 'CRM using express'
         },
         servers: [{
-            url: 'http://localhost:57770'
+            url: 'http://localhost:7000'
         }],
     },
     apis: ["./src/documentation/*.js"]
@@ -55,7 +55,7 @@ routes.forEach((item, i) => {
     app.use(`/api/v1/${item}`, require(`./src/routes/${item}`)) //
 });
 
-const PORT = 57770;
+const PORT = 7000;
 
 
 http.createServer({}, app).listen(PORT); //, APP_IP

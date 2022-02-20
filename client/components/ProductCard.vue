@@ -5,6 +5,7 @@
 <!--    <img :src="require(`~/${imageUrl}`)" alt="" />-->
     <div class="card_footer">
       <nuxt-link :to="`/products/${_id}`">КЛИКНУТЬ</nuxt-link>
+      <img :src=imageUrl alt="">
     </div>
   </div>
 </template>

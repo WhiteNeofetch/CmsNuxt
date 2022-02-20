@@ -9,7 +9,7 @@
                             Dashboard
                         </span>
                     </a>
-                  
+
                 </li>
                 <li class="has-subnav">
                     <a href="#">
@@ -18,7 +18,7 @@
                             Stars Components
                         </span>
                     </a>
-                    
+
                 </li>
                 <li class="has-subnav">
                     <a href="#">
@@ -27,7 +27,7 @@
                             Forms
                         </span>
                     </a>
-                    
+
                 </li>
                 <li class="has-subnav">
                     <a href="#">
@@ -36,7 +36,7 @@
                             Pages
                         </span>
                     </a>
-                   
+
                 </li>
                 <li>
                     <a href="#">
@@ -88,7 +88,7 @@
                             Logout
                         </span>
                     </a>
-                </li>  
+                </li>
             </ul>
         </nav>
  <Nuxt />
@@ -155,7 +155,7 @@ text-decoration:none;
 -webkit-transform:translateZ(0) scale(1,1);
 -webkit-transition:all .1s linear;
 transition:all .1s linear;
-  
+
 }
 
 .main-menu .nav-icon {

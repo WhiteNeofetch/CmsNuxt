@@ -44,7 +44,7 @@ const genericCrud = (model, {
                 let data =  moment().format('DDMMYYYY-HHmmss_SSS')
            
                 let path = `client/static/${name}${data}-}.jpg` //путь для статики бэка
-                let pathFront = `client/static/${name}${data}}.jpg` //путь для статики фронта
+                let pathFront = `/${name}${data}.jpg` //путь для статики фронта
                 fs.writeFile(path, base64Image, {encoding: 'base64'}, function(err) { //создание jpg файла
                     console.log('File created');
                 })
@@ -78,7 +78,7 @@ const genericCrud = (model, {
                 let base64Image = image.split(';base64,').pop();
                  let data =  moment().format('DDMMYYYY-HHmmss_SSS')
              let path = `client/static/${name}${data}.jpg` //путь для статики бэка
-                let pathFront = `client/static/${name}${data}.jpg` //путь для статики фронта
+                let pathFront = `/${name}${data}.jpg` //путь для статики фронта
                 body.imageUrl = pathFront;
                 fs.writeFile(path, base64Image, { encoding: 'base64' }, function (err) { //создание jpg файла
                     console.log('File created');
